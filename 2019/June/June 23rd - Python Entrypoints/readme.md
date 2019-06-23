@@ -26,4 +26,4 @@ setuptools.setup(
     # More setup info
 ```
 
-This can be seen in full detail with the [PyTube module](https://github.com/nficano/pytube/blob/22157bd002ffa7139e7f13e326fbeb13921fdac7/setup.py#L59
+This can be seen in full detail with the [PyTube module](https://github.com/nficano/pytube/blob/22157bd002ffa7139e7f13e326fbeb13921fdac7/setup.py#L59)
