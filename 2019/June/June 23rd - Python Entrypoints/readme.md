@@ -5,7 +5,7 @@ Script entrypoints are useful for allowing you to write scripts that can be acce
 
 ## Usage
 In this repo you can see the demo code and actually run it using the steps below
-1. Install as a pip package using ```pip install .``
+1. Install as a pip package using ```pip install .```
 2. In your terminal type ```command_name``` (literally command_name, this is not a placeholder)
 3. The help text for the command will appear, and this can be run in any folder on your computer.
 
