@@ -4,7 +4,7 @@ This repo is the full collection of posts made on the [@canadiancoding](https://
 It is always a good idea to check out the full repository from my instagram posts because the README's are much more detailed, and provide much more info than I can on instagram.
 
 ## Folder Structure
-All code is organized by when it was uploaded to instagram. The typical format is ```posts/<month>/<day> - <topic>```. 
+All code is organized by when it was uploaded to instagram. The typical format is ```<year>/<month>/<day> - <topic>```. 
 
 For more details see my instagram page at [@canadiancoding](https://www.instagram.com/canadiancoding/)
 
