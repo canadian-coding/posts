@@ -1,0 +1,102 @@
+{% extends "template.html" %}
+
+{% block page_title %} Primary Writing page {% endblock page_title %}
+
+{% block stylesheets %}
+<!--Import Quill Stylesheets-->
+<link href="//cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+{% endblock stylesheets %}
+
+{% block content %}
+<form class="form-horizontal" method="post">
+  <fieldset>
+  <!-- Form Name -->
+  <legend>Demo Authoring Page</legend>
+
+  <!-- Text input-->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="Heading">Heading</label>  
+    <div class="col-md-8">
+    <input id="Heading" name="Heading" type="text" placeholder="Heading text Here" class="form-control input-md" required="">
+    <span class="help-block">Enter Heading text here</span>  
+    </div>
+  </div>
+  
+  <!-- Text input-->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="sub-heading">Sub-Heading</label>  
+    <div class="col-md-8">
+    <input id="sub-heading" name="sub-heading" type="text" placeholder="Sub Heading Text here" class="form-control input-md" required="">
+    <span class="help-block">Enter Sub Heading Text above</span>  
+    </div>
+  </div>
+  
+  <!-- Text input-->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="category">Categorie(s)</label>  
+    <div class="col-md-8">
+    <input id="category" name="category" type="text" placeholder="Enter Category(s) Here" class="form-control input-md" required="">
+    <span class="help-block">Enter Category(s) above</span>  
+    </div>
+  </div>
+  
+  
+  <!--Div that will have quill injected into it-->
+  <div id="editor" style="text-align: center; min-height: 800px;">
+  </div>
+  
+  <!--Hidden field to be filled with value from editor div on form submit-->
+  <input type="hidden" id="content" name="content">
+ 
+  <!-- Submit Button -->
+  <center>
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="submit"></label>
+        <div class="col-md-8">
+          <button id="submit" name="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+  </center>
+  </fieldset>
+
+</form>
+
+{% endblock content %}
+
+</br>
+
+{% block scripts %}
+<!--Setting up quill editor-->
+<script src="//cdn.quilljs.com/1.3.6/quill.js"></script>
+<script>
+// Set up editing options available
+var toolbarOptions = [
+  [{ 'font': [] }],
+  [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+  ['bold', 'italic', 'underline', 'strike'],
+  ['blockquote', { 'list': 'ordered'}, { 'list': 'bullet' }],
+  [{ 'script': 'sub'}, { 'script': 'super' }],      
+  [{ 'background': [] }],          
+  ['clean']
+];
+
+// Convert editor div to quill object
+var quill = new Quill('#editor', {
+  modules: {
+    toolbar: toolbarOptions  // Include button in toolbar
+  },
+  theme: "snow"
+});
+
+// Adds the content inside the quill editor to the form submit
+var form = document.querySelector('form');
+form.onsubmit = function() {
+  // Populate hidden form element on submit
+  var content = document.querySelector('input[name=content]');
+  // Get content as HTML and fill content vakye wutg it
+  content.value = quill.container.firstChild.innerHTML
+  
+  console.log("Submitted", $(form).serialize(), $(form).serializeArray());
+};
+</script>
+{% endblock scripts %}

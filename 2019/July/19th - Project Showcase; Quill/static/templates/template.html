@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Manifest and Metadata-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>{% block page_title %}  {% endblock %}| Quill Demo</title>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    {% block stylesheets %}
+    {% endblock %}
+    
+</head>
+
+<body style="background-color: #f0f0f0;">
+    
+    <!-- Navigation Menu -->
+    <nav class="navbar navbar-dark navbar-expand-md text-white navigation-clean" style="background-color: #141414;">
+            <div class="container"><a class="navbar-brand" href="/" style="color: #f0f0f0;">Quill Demo</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                <div
+                    class="collapse navbar-collapse" id="navcol-1">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item" role="presentation"><a class="nav-link active" href="#">Home</a></li>
+                        <li class="nav-item" role="presentation"></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="//github.com/canadian-coding/posts/blob/master/2019/July/19th%20-%20Project%20Showcase;%20Quill/readme.md" target="_blank">Read Me</a></li>
+                        </li>
+                    </ul>
+            </div>
+        </div>
+    </nav>
+    
+    
+    <!-- Page Content -->
+    {% block content %}
+    {% endblock %}
+
+    <!-- Footer -->
+    <div class="text-white-50 d-xl-flex justify-content-xl-center footer-basic" style="background-color: #141414;">
+        <footer class="text-center">
+            <div class="text-center justify-content-xl-center align-items-xl-center social"><a href="//github.com/canadian-coding/posts" target="_blank"><i class="icon ion-social-github"></i></a><a href="//instagram.com/canadiancoding/" target="_blank"><i class="icon ion-social-instagram"></i></a></div>
+            <ul class="list-inline d-xl-inline-flex justify-content-xl-center align-items-xl-center">
+                <li class="list-inline-item d-xl-flex"><a href="/">Home</a></li>
+            </ul><a class="text-white-50 justify-content-xl-center" href="//github.com/canadian-coding"><br><br>Demo by Canadian Coding<br></a></footer>
+    </div>
+
+    {% block scripts %}
+    <!-- Javascript -->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+    {% endblock %}
+
+</body>
+
+</html>
