@@ -1,26 +1,25 @@
-# TQDM module showcase
+# Easy Class Serialization using Vars
 
 ## Description
 
-tqdm is a python module that allows you to create progress bars. It works by wrapping an iterable in the tqdm object, more info can be found in the [readme](https://github.com/tqdm/tqdm/blob/master/README.rst) from the [source code](https://github.com/tqdm/tqdm)
+This demo showcases a useful technique for serializing classes to JSON using the vars() method.
 
 ## Definitions
 
-### TQDM
+### vars()
 
-A module that allows you to create progress bars for iterables in python.
+A method that takes a class instance and returns a dict of the instance attributes.
+
+### JSON
+
+JSON is a file format used to store data in key-value pairs. More information can be found [here](https://en.wikipedia.org/wiki/JSON)
 
 ## Usage
 
-### Requirements
-
-For this demo you will need a few things, i've outlined the requirements below and how to set them up:
-TQDM: to get tqdm you can either use ```pip install tqdm``` or in the folder with this readme run ```pip install -r requirements.txt```
-
 ### Running
 
-After you have obtained the requirements. in this repo you can see the demo code and actually run it by running ```python tqdm_demo.py``` or ```python3 tqdm_demo.py```.
+In this repo you can see the demo code and actually run it by running ```python vars.py``` or ```python3 vars.py```.
 
 ## Real World Applications
 
-This module is incredibly useful for scripts that have any long iteration processes. For example if you are scraping contents from an HTML table on a webpage that has a few hundred entries adding a progress bar let's users (including you) know that the script/program hasn't crashed and is just taking a while to process.
+This method is useful if you are writing a simple application that needs to serve class instances via a REST endpoint, or are looking for easy serialization to a cross platform format.
