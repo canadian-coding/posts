@@ -10,7 +10,9 @@ def hello():
     """On page visit increments and displays visitor count"""
     global visitor_count # Grabs the visitor_count global variable
     visitor_count += 1 # Increments the visitor_count global variable
-    return f'There have been: {visitor_count} visitor(s)'
+    return f"There have been: {visitor_count} visitor(s)"
 
-if __name__ == '__main__':
-    app.run()
+if __name__ == "__main__":
+    """App needs to be published on a port available to outside services
+    since locust emulates users connecting from different users"""
+    app.run(host="0.0.0.0")
