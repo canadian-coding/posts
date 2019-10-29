@@ -1,6 +1,6 @@
-"""A demonstration of list comprehensions vs standard iteration.
+"""A demonstration of generator expressions vs function yielding.
 
-In this demo the numbers 0-9 are squared and put into a list using
+In this demo the numbers 0-9 are squared and yielded to a generator using
 both methods.
 """
 
@@ -16,13 +16,13 @@ def generate_squares():
     for number in range(10):          # loop over 0-9
         yield (number**2)             # Square the number and yield it to the generator
 
-# Uses list comprehensions to generate a list of the squares from 0-9
-comprehension_result = (number**2 for number in range(10))
+# Uses generator expressions to yielf the squares from 0-9
+expression_result = (number**2 for number in range(10))
 
 print("Generator function results:")
 for number in generate_squares():
     print(number)
 
 print("\nGenerator expression results:")
-for number in comprehension_result:
+for number in expression_result:
     print(number)
