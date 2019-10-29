@@ -16,7 +16,7 @@ def generate_squares():
     for number in range(10):          # loop over 0-9
         yield (number**2)             # Square the number and yield it to the generator
 
-# Uses generator expressions to yielf the squares from 0-9
+# Uses generator expressions to yield the squares from 0-9
 expression_result = (number**2 for number in range(10))
 
 print("Generator function results:")

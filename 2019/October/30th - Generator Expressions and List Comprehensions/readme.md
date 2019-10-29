@@ -60,7 +60,45 @@ It does exactly the same as the above example, it is just shorter. The basic syn
 
 ### Generator Expressions
 
-...
+Generator expressions follow the same principles as list comprehensions, the primary difference being that the iteration yields a generator object as opposed to a list object. They tend to be more helpful than list comprehensions since they remove the boilerplate code for yielding values. 
+
+
+
+Here is an example function that uses the standard yield keyword in conjunction with a function:
+
+
+
+```python
+def generate_squares():
+    """Iterates through 0-9, squares the value and yields it to the generator
+
+    Yields
+    ------
+    int:
+        Square of the current number in the iteration
+
+    """
+    for number in range(10):          # loop over 0-9
+        yield (number**2)             # Square the number and yield it to the generator
+
+# Uses generator object within function to print squares of 0-9
+print("Generator function results:")
+for number in generate_squares():
+    print(number)
+```
+
+
+
+The generator expression equivalent is much shorter:
+
+```python
+# Uses generator expressions to yield the squares from 0-9
+expression_result = (number**2 for number in range(10))
+
+print("\nGenerator expression results:")
+for number in expression_result:
+    print(number)
+```
 
 
 
@@ -80,4 +118,16 @@ All of the code in the two demos require no external dependencies, they can be r
 
 
 
-...
+The primary purpose of these features in python is to shorten and standardize common design patterns. One problem they both present however is that although convenient to developers who are used to them, they are not intuitive to beginners and so depending on your codebase they may do more harm than good.
+
+
+
+Another issue they can present is that the conditions can stack to more than one iterative loop, meaning you can iterate multi-dimensional arrays with this method. If you are at the point of doing this for something more than a 2 dimensional array then, **for the sake of your fellow developers** just do the long way as if I have to read a list comprehension like the one below you will be off my team:
+
+```python
+# Generates a 3d array that's 3 sublists of 3 elements 10 times
+please_no = [[[element for element in range(3)] for num in range(3)] for sublist in range(10)]
+print(please_no)"""prints:
+[[[0, 1, 2], [0, 1, 2], [0, 1, 2]], [[0, 1, 2], [0, 1, 2], [0, 1, 2]], [[0, 1, 2], [0, 1, 2], [0, 1, 2]], [[0, 1, 2], [0, 1, 2], [0, 1, 2]], [[0, 1, 2], [0, 1, 2], [0, 1, 2]],[[0, 1, 2], [0, 1, 2], [0, 1, 2]], [[0, 1, 2], [0, 1, 2], [0, 1, 2]], [[0, 1, 2], [0, 1, 2],[0, 1, 2]], [[0, 1, 2], [0, 1, 2], [0, 1, 2]], [[0, 1, 2], [0, 1, 2], [0, 1, 2]]]"""
+```
+
