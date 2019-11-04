@@ -152,4 +152,23 @@ int area_of_circle(int radius){
 
 ## Running C Code
 
-...
+To run C code you will need a C compiler, here are a few possible options:
+
+[gcc]( https://gcc.gnu.org/ ) (What I use)
+
+[clang]( https://clang.llvm.org/ )
+
+
+
+Assuming you installed gcc you can compile the code using
+
+
+
+```bash
+gcc <filename>.c -o <executeable name>
+```
+
+
+
+ This will then compile the code to a binary (.exe for windows, and regular binary for macOS & Linux) and run it.
+
