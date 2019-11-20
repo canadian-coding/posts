@@ -2,8 +2,6 @@
 
 
 
-
-
 C is a general purpose language primarily used in low-level programming such as operating system code. It was originally designed to help create Unix software by bell labs (Dennis Ritchie specifically), but nowadays is found in many operating systems and pieces of software. 
 
 
@@ -28,9 +26,15 @@ C is a general purpose language primarily used in low-level programming such as 
 - Semi-colon based line endings (need to put a ';' after every statement)
 - Created: 1972
 
+
+
 ## Useful Starter Resources
 
-...
+[C programming language (book)]( https://www.amazon.ca/Programming-Language-2nd-Brian-Kernighan/dp/0131103628/ref=sr_1_1?crid=2NS9YMQCV2TG9&keywords=the+c+programming+language&qid=1573684591&sprefix=the+c+pro%2Caps%2C226&sr=8-1 )
+
+[Tutorialspoint]( https://www.tutorialspoint.com/cprogramming/index.htm )
+
+[learn-c]( https://www.learn-c.org/ )
 
 
 
@@ -160,7 +164,7 @@ To run C code you will need a C compiler, here are a few possible options:
 
 
 
-Assuming you installed gcc you can compile the code using
+Assuming you installed gcc you can compile the code using:
 
 
 
@@ -171,4 +175,3 @@ gcc <filename>.c -o <executeable name>
 
 
  This will then compile the code to a binary (.exe for windows, and regular binary for macOS & Linux) and run it.
-
