@@ -8,7 +8,7 @@ print(f"{my_queue.pop()} has been removed from queue")
 for line_location in range(len(my_queue)):
     """Because my_queue.pop() is called in the iteration, the
     deque object ends up being empty"""
-    print(f"{my_queue.pop()} was in position {line_location+1}")
+    print(f"{my_queue.pop()} was in position {line_location + 1}")
 
 print(f"Queue is empty: {my_queue}") # will be empty now
 
