@@ -2,7 +2,7 @@
 
 ## Description
 
-...
+[ezprez](https://ezprez.readthedocs.io/en/latest/) is an object based python api for creating web presentations. The intention is to allow people who don't necessarily know web development to create good looking web presentations.
 
 ## Usage
 
