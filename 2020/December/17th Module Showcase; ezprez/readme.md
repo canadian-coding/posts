@@ -8,11 +8,11 @@
 
 ### Running
 
-This repo has demo code for testing out storing and loading to/from a spreadsheet. To run the files:
+This repo has demo code for showing off a very basic presentation. To run the files:
 
-1. Install ezspreadsheet: ```pip install ezprez``` or ```sudo pip3 install ezprez```
+1. Install ezprez: ```pip install ezprez``` or ```sudo pip3 install ezprez```
 2. Run the file ```python3 presentation_example.py``` or ```python presentation_example.py```
-3. Open the newl generated ```Presentation/index.html``` in a browser
+3. Open the newly generated ```Presentation/index.html``` in a browser
 
 ## Real World Applications
 
